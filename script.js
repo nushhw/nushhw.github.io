@@ -1,5 +1,5 @@
 
-// Smooth scrolling for internal links
+// Smooth scrolling for navigation links
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
         e.preventDefault();
@@ -11,6 +11,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Add scroll effect to navbar
+window.addEventListener('scroll', () => {
+    const header = document.querySelector('header');
+    if (window.scrollY > 100) {
+        header.style.background = 'rgba(255, 255, 255, 0.98)';
+    } else {
+        header.style.background = 'rgba(255, 255, 255, 0.95)';
+    }
 });
 
 // Animate elements on scroll
@@ -29,88 +39,32 @@ const observer = new IntersectionObserver((entries) => {
 }, observerOptions);
 
 // Observe all sections for animation
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(30px)';
-        section.style.transition = 'opacity 0.6s ease, transform 0.6s ease';
-        observer.observe(section);
-    });
-
-    // Add typing effect to the name
-    const nameElement = document.querySelector('.name');
-    if (nameElement) {
-        const nameText = nameElement.textContent;
-        nameElement.textContent = '';
-        nameElement.style.borderRight = '2px solid #667eea';
-        
-        let i = 0;
-        const typeWriter = () => {
-            if (i < nameText.length) {
-                nameElement.textContent += nameText.charAt(i);
-                i++;
-                setTimeout(typeWriter, 100);
-            } else {
-                setTimeout(() => {
-                    nameElement.style.borderRight = 'none';
-                }, 1000);
-            }
-        };
-        
-        setTimeout(typeWriter, 500);
-    }
-
-    // Add parallax effect to hero section
-    window.addEventListener('scroll', () => {
-        const scrolled = window.pageYOffset;
-        const hero = document.querySelector('.hero');
-        if (hero) {
-            hero.style.transform = `translateY(${scrolled * 0.5}px)`;
-        }
-    });
-
-    // Add hover effects to skill items
-    const skillItems = document.querySelectorAll('.skill-item');
-    skillItems.forEach(item => {
-        item.addEventListener('mouseenter', () => {
-            item.style.transform = 'translateY(-5px) scale(1.05)';
-        });
-        
-        item.addEventListener('mouseleave', () => {
-            item.style.transform = 'translateY(0) scale(1)';
-        });
-    });
+document.querySelectorAll('section').forEach(section => {
+    section.style.opacity = '0';
+    section.style.transform = 'translateY(30px)';
+    section.style.transition = 'all 0.6s ease';
+    observer.observe(section);
 });
 
-// Add particle effect to background (optional enhancement)
-function createParticle() {
-    const particle = document.createElement('div');
-    particle.style.position = 'fixed';
-    particle.style.width = '4px';
-    particle.style.height = '4px';
-    particle.style.background = 'rgba(102, 126, 234, 0.3)';
-    particle.style.borderRadius = '50%';
-    particle.style.pointerEvents = 'none';
-    particle.style.zIndex = '-1';
-    particle.style.left = Math.random() * window.innerWidth + 'px';
-    particle.style.top = window.innerHeight + 'px';
-    
-    document.body.appendChild(particle);
-    
-    const animation = particle.animate([
-        { transform: 'translateY(0px)', opacity: 0 },
-        { transform: 'translateY(-100px)', opacity: 1 },
-        { transform: 'translateY(-' + (window.innerHeight + 100) + 'px)', opacity: 0 }
-    ], {
-        duration: Math.random() * 3000 + 2000,
-        easing: 'linear'
-    });
-    
-    animation.onfinish = () => {
-        particle.remove();
-    };
+// Add typing effect to hero title
+function typeWriter(element, text, speed = 100) {
+    let i = 0;
+    element.innerHTML = '';
+    function type() {
+        if (i < text.length) {
+            element.innerHTML += text.charAt(i);
+            i++;
+            setTimeout(type, speed);
+        }
+    }
+    type();
 }
 
-// Create particles periodically
-setInterval(createParticle, 300);
+// Initialize typing effect when page loads
+window.addEventListener('load', () => {
+    const heroTitle = document.querySelector('.hero-content h1');
+    if (heroTitle) {
+        const originalText = heroTitle.textContent;
+        typeWriter(heroTitle, originalText, 150);
+    }
+});
