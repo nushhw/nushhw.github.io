@@ -1,239 +1,159 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>LI XINYUAN | Portfolio</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <style>
-        /* Custom styles for background canvas and specific hover effects */
-        body {
-            /* Tailwind will handle background-color and text-color */
-            line-height: 1.6;
-            position: relative;
-            overflow-x: hidden;
-            /* Ensure smooth scrolling for hash links */
-            scroll-behavior: smooth;
-        }
-
-        canvas#bg {
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: -1;
-        }
-
-        /* Custom nav link hover effect (Tailwind cannot directly do ::after pseudo-elements) */
-        nav a {
-            position: relative;
-            /* Tailwind handles color, text-decoration, margin, font-weight */
-        }
-
-        nav a::after {
-            content: '';
-            position: absolute;
-            bottom: -4px;
-            left: 0;
-            width: 100%;
-            height: 2px; /* Default underline thickness */
-            background-color: #00bfff; /* Using direct hex for the accent color */
-            transform: scaleX(0);
-            transform-origin: right;
-            transition: transform 0.3s ease, height 0.3s ease; /* Smooth transition for both scale and height */
-        }
-
-        nav a:hover::after {
-            transform: scaleX(1);
-            transform-origin: left;
-            height: 4px; /* Thicker underline on hover */
-        }
-
-        /* Styling for contact links: always underlined, smooth color and thickness change on hover */
-        .contact-link {
-            position: relative;
-            color: #00bfff; /* Matches Tailwind's sky-400 */
-            text-decoration: none; /* Remove default browser underline to control with ::after */
-            transition: color 0.3s ease; /* Smooth color change on hover */
-        }
-
-        .contact-link::after {
-            content: '';
-            position: absolute;
-            bottom: -2px; /* Position of the underline */
-            left: 0;
-            width: 100%;
-            height: 2px; /* Default underline thickness */
-            background-color: #00bfff; /* Underline color (sky-400) */
-            transition: height 0.3s ease, background-color 0.3s ease; /* Smooth transition for thickness and color */
-        }
-
-        .contact-link:hover {
-            color: #fbff00; /* A lighter shade of sky for hover (sky-300) */
-        }
-
-        .contact-link:hover::after {
-            height: 4px; /* Thicker underline on hover */
-            background-color: #f6ff00; /* Match hover color for the underline */
-        }
-    </style>
+    <title>Your Name - Developer Portfolio</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
 </head>
-<body class="bg-gray-900 text-gray-200">
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo">Your Name</h1>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#projects" class="nav-link">Projects</a></li>
+                    <li><a href="#skills" class="nav-link">Skills</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
 
-<canvas id="bg"></canvas>
-
-<nav class="fixed top-0 w-full bg-gray-900 bg-opacity-95 border-b border-gray-800 flex justify-center py-4 z-50">
-    <a href="#about" class="text-gray-200 no-underline mx-6 font-medium hover:text-sky-400 transition-colors duration-300">About</a>
-    <a href="#highlights" class="text-gray-200 no-underline mx-6 font-medium hover:text-sky-400 transition-colors duration-300">Highlights</a>
-    <a href="#projects" class="text-gray-200 no-underline mx-6 font-medium hover:text-sky-400 transition-colors duration-300">Projects</a>
-    <a href="#skills" class="text-gray-200 no-underline mx-6 font-medium hover:text-sky-400 transition-colors duration-300">Skills</a>
-    <a href="#contact" class="text-gray-200 no-underline mx-6 font-medium hover:text-sky-400 transition-colors duration-300">Contact</a>
-</nav>
-
-<header class="text-center pt-32 pb-20 px-4">
-    <h1 class="text-6xl font-bold text-sky-400 mb-2">LI XINYUAN</h1>
-    <p class="text-2xl text-gray-400">Student</p>
-</header>
-
-<main class="max-w-4xl mx-auto px-4 py-8">
-    <section id="about" class="mb-16">
-        <h2 class="text-4xl font-semibold text-sky-400 mb-4">About Me</h2>
-        <p class="text-lg">I am a student from NUS High who is passionate about mathematics, programming, and physics. I enjoy building interactive games, exploring theoretical ideas, and tackling problems. Welcome to my personal site!</p>
+    <section id="hero">
+        <div class="hero-content">
+            <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
+            <p class="hero-description">Full-Stack Developer & Problem Solver</p>
+            <p>I create innovative solutions using modern technologies</p>
+            <a href="#projects" class="cta-button">View My Work</a>
+        </div>
     </section>
 
-    <!-- Highlights Section: Styled as a prominent box with larger text and hover effect -->
-    <section id="highlights" class="mb-16 black text-white rounded-lg p-10 border-2 border-sky-500 shadow-lg
-                                  transform transition-transform duration-300 hover:scale-[1.2]">
-        <h2 class="text-5xl font-extrabold mb-6 text-center">Highlights</h2>
-        <ul class="list-disc pl-8 text-xl leading-relaxed">
-            <li class="mb-3">NEW webpage!!<a href="https://github-setup-2fa.vercel.app" target="_blank" class="contact-link">Setting up Github 2FA without phones!</a></li>
-            <li class="mb-3">Wordle bot!! <a href="https://wordle-inky-xi.vercel.app/" target="_blank" class="contact-link">Wordle Bot</a></li>
-        </ul>
+    <section id="about">
+        <div class="container">
+            <h2>About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>I'm a passionate developer with experience in building web applications and solving complex problems. I love learning new technologies and creating projects that make a difference.</p>
+                    <p>When I'm not coding, you can find me exploring new frameworks, contributing to open source projects, or sharing knowledge with the developer community.</p>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="projects" class="mb-16">
-        <h2 class="text-4xl font-semibold text-sky-400 mb-4">Projects</h2>
-        <ul class="list-disc pl-6">
-            <li class="mb-3"><strong>Wordle Bot</strong>: Solving wordle</li>
-            <li class="mb-3"><strong>Coming soon! </strong>: COLLAB</li>
-        </ul>
+    <section id="skills">
+        <div class="container">
+            <h2>Programming Languages & Technologies</h2>
+            <div class="skills-grid">
+                <div class="skill-item">
+                    <h3>JavaScript</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="90%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>React</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="80%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Node.js</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="75%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>HTML/CSS</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="95%"></div>
+                    </div>
+                </div>
+                <div class="skill-item">
+                    <h3>Git</h3>
+                    <div class="skill-bar">
+                        <div class="skill-progress" data-width="85%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="skills" class="mb-16">
-        <h2 class="text-4xl font-semibold text-sky-400 mb-4">Skills</h2>
-        <ul class="list-disc pl-6">
-            <li class="mb-3"><strong>Math</strong>: Math olympiad</li>
-            <li class="mb-3"><strong>JavaScript</strong>: Game development, UI/UX design</li>
-        </ul>
+    <section id="projects">
+        <div class="container">
+            <h2>My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <h3>E-Commerce Platform</h3>
+                    <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">React</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">MongoDB</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Task Management App</h3>
+                    <p>A productivity app that helps teams manage projects and tasks efficiently. Built with Python Flask backend and vanilla JavaScript frontend.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Flask</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <h3>Weather Dashboard</h3>
+                    <p>A responsive weather application that provides real-time weather data and forecasts. Uses external APIs and features interactive charts.</p>
+                    <div class="project-tech">
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">Chart.js</span>
+                        <span class="tech-tag">API Integration</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="#" class="project-link">Live Demo</a>
+                        <a href="#" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
 
-    <section id="contact" class="mb-16">
-        <h2 class="text-4xl font-semibold text-sky-400 mb-4">Contact</h2>
-        <p class="text-lg">Email: <a href="mailto:h2510079@nushigh.edu.sg" class="contact-link">h2510079@nushigh.edu.sg</a></p>
-        <p class="text-lg">GitHub: <a href="https://github.com/nushhw" target="_blank" class="contact-link">github.com/nushhw</a></p>
+    <section id="contact">
+        <div class="container">
+            <h2>Get In Touch</h2>
+            <p>I'm always interested in new opportunities and collaborations.</p>
+            <div class="contact-links">
+                <a href="mailto:your.email@example.com" class="contact-link">Email</a>
+                <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
+                <a href="https://linkedin.com/in/yourprofile" class="contact-link">LinkedIn</a>
+            </div>
+        </div>
     </section>
-</main>
 
-<footer class="text-center py-8 px-4 text-gray-500 text-sm border-t border-gray-800">
-    &copy; 2025 LI XINYUAN
-</footer>
-<script>
-    const canvas = document.getElementById('bg');
-    const ctx = canvas.getContext('2d');
-    let w = canvas.width = window.innerWidth;
-    let h = canvas.height = window.innerHeight;
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Your Name. All rights reserved.</p>
+        </div>
+    </footer>
 
-    const numPoints = 200;
-    const repelStrength = 0.20;
-    const damping = 0.985; // almost no slow down
-    const wanderStrength = 0.10; // more visible floating
-    const points = [];
-
-    for (let i = 0; i < numPoints; i++) {
-        points.push({
-            x: Math.random() * w,
-            y: Math.random() * h,
-            vx: (Math.random() - 0.5) * 0.2,
-            vy: (Math.random() - 0.5) * 0.2
-        });
-    }
-
-    let mouse = { x: null, y: null };
-    window.addEventListener('mousemove', e => {
-        mouse.x = e.clientX;
-        mouse.y = e.clientY;
-    });
-
-    window.addEventListener('resize', () => {
-        w = canvas.width = window.innerWidth;
-        h = canvas.height = window.innerHeight;
-    });
-
-    function drawLines() {
-        ctx.clearRect(0, 0, w, h);
-        ctx.shadowColor = 'rgba(0, 191, 255, 0.8)'; // Corresponds to Tailwind's sky-400 or a custom blue
-        ctx.shadowBlur = 10;
-
-        for (let i = 0; i < points.length; i++) {
-            let p = points[i];
-
-            // Add wander movement
-            p.vx += (Math.random() - 0.5) * wanderStrength;
-            p.vy += (Math.random() - 0.5) * wanderStrength;
-
-            // Repel from mouse
-            if (mouse.x !== null && mouse.y !== null) {
-                let dx = p.x - mouse.x;
-                let dy = p.y - mouse.y;
-                let dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 100 && dist > 1) {
-                    let force = (1 - dist / 100) * repelStrength;
-                    p.vx += (dx / dist) * force;
-                    p.vy += (dy / dist) * force;
-                }
-            }
-
-            // Move
-            p.x += p.vx;
-            p.y += p.vy;
-
-            // Slight damping
-            p.vx *= damping;
-            p.vy *= damping;
-
-            // Bounce off screen edges
-            if (p.x < 0 || p.x > w) p.vx *= -1;
-            if (p.y < 0 || p.y > h) p.vy *= -1;
-
-            // Draw glowing point
-            ctx.beginPath();
-            ctx.arc(p.x, p.y, 2.2, 0, Math.PI * 2);
-            ctx.fillStyle = '#00bfff'; // Matches accent color
-            ctx.fill();
-
-            // Connect to nearby points
-            for (let j = i + 1; j < points.length; j++) {
-                let q = points[j];
-                let dx = p.x - q.x;
-                let dy = p.y - q.y;
-                let dist = Math.sqrt(dx * dx + dy * dy);
-                if (dist < 100) {
-                    ctx.beginPath();
-                    ctx.moveTo(p.x, p.y);
-                    ctx.lineTo(q.x, q.y);
-                    ctx.strokeStyle = `rgba(0,191,255,${1 - dist / 100})`; // Matches accent color
-                    ctx.stroke();
-                }
-            }
-        }
-    }
-
-    function animate() {
-        drawLines();
-        requestAnimationFrame(animate);
-    }
-
-    animate();
-</script>
-
+    <script src="script.js"></script>
 </body>
 </html>
