@@ -2,158 +2,164 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Xinyuan - Developer Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-    <div class="container">
-        <!-- Header Section -->
-        <header class="hero">
-            <div class="profile-image">
-                <i class="fas fa-user-circle"></i>
-            </div>
-            <h1 class="name">Xinyuan</h1>
-            <p class="title">Full-Stack Developer</p>
-            <p class="subtitle">Passionate about creating innovative solutions through code</p>
-            <div class="social-links">
-                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
-                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
-                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
-            </div>
-        </header>
+    <header>
+        <nav>
+            <div class="logo">Xinyuan</div>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
 
-        <!-- About Section -->
-        <section class="about">
-            <h2><i class="fas fa-user"></i> About Me</h2>
-            <p>Hello! I'm Xinyuan, a passionate developer who loves turning ideas into reality through code. I enjoy working on both frontend and backend technologies, always eager to learn new frameworks and solve challenging problems.</p>
-        </section>
-
-        <!-- Skills Section -->
-        <section class="skills">
-            <h2><i class="fas fa-code"></i> Programming Languages & Technologies</h2>
-            <div class="skills-grid">
-                <div class="skill-item">
-                    <i class="fab fa-js-square"></i>
-                    <span>JavaScript</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-python"></i>
-                    <span>Python</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-react"></i>
-                    <span>React</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-node-js"></i>
-                    <span>Node.js</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-html5"></i>
-                    <span>HTML5</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-css3-alt"></i>
-                    <span>CSS3</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fas fa-database"></i>
-                    <span>SQL</span>
-                </div>
-                <div class="skill-item">
-                    <i class="fab fa-git-alt"></i>
-                    <span>Git</span>
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h1>Hi, I'm <span class="highlight">Xinyuan</span></h1>
+                <p class="hero-subtitle">Full-Stack Developer & Problem Solver</p>
+                <div class="cta-buttons">
+                    <a href="#projects" class="btn primary">View My Work</a>
+                    <a href="#contact" class="btn secondary">Get In Touch</a>
                 </div>
             </div>
         </section>
 
-        <!-- Projects Section -->
-        <section class="projects">
-            <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
-            <div class="projects-grid">
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-shopping-cart"></i>
-                    </div>
-                    <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution built with React and Node.js, featuring user authentication, payment processing, and inventory management.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">React</span>
-                        <span class="tech-tag">Node.js</span>
-                        <span class="tech-tag">MongoDB</span>
-                    </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
-                    </div>
-                </div>
+        <section id="about" class="about">
+            <div class="container">
+                <h2>About Me</h2>
+                <p>I'm a passionate developer who loves creating innovative solutions and building meaningful applications. I enjoy working with modern technologies and constantly learning new skills to stay at the forefront of development.</p>
+            </div>
+        </section>
 
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-chart-line"></i>
+        <section id="skills" class="skills">
+            <div class="container">
+                <h2>Programming Languages & Technologies</h2>
+                <div class="skills-grid">
+                    <div class="skill-item">
+                        <i class="fab fa-js-square"></i>
+                        <span>JavaScript</span>
                     </div>
-                    <h3>Data Visualization Dashboard</h3>
-                    <p>Interactive dashboard for data analysis using Python and D3.js, helping businesses make data-driven decisions with real-time insights.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Python</span>
-                        <span class="tech-tag">D3.js</span>
-                        <span class="tech-tag">Flask</span>
+                    <div class="skill-item">
+                        <i class="fab fa-python"></i>
+                        <span>Python</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <div class="skill-item">
+                        <i class="fab fa-react"></i>
+                        <span>React</span>
                     </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-icon">
-                        <i class="fas fa-mobile-alt"></i>
+                    <div class="skill-item">
+                        <i class="fab fa-node-js"></i>
+                        <span>Node.js</span>
                     </div>
-                    <h3>Task Management App</h3>
-                    <p>A responsive web application for project management with drag-and-drop functionality, team collaboration features, and progress tracking.</p>
-                    <div class="project-tech">
-                        <span class="tech-tag">Vue.js</span>
-                        <span class="tech-tag">Express</span>
-                        <span class="tech-tag">PostgreSQL</span>
+                    <div class="skill-item">
+                        <i class="fab fa-html5"></i>
+                        <span>HTML5</span>
                     </div>
-                    <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
-                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
+                    <div class="skill-item">
+                        <i class="fab fa-css3-alt"></i>
+                        <span>CSS3</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fab fa-git-alt"></i>
+                        <span>Git</span>
+                    </div>
+                    <div class="skill-item">
+                        <i class="fas fa-database"></i>
+                        <span>SQL</span>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Contact Section -->
-        <section class="contact">
-            <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
-            <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
-            <div class="contact-info">
-                <a href="mailto:xinyuan@example.com" class="contact-item">
-                    <i class="fas fa-envelope"></i>
-                    <span>xinyuan@example.com</span>
-                </a>
-                <a href="#" class="contact-item">
-                    <i class="fab fa-linkedin"></i>
-                    <span>LinkedIn Profile</span>
-                </a>
-                <a href="#" class="contact-item">
-                    <i class="fab fa-github"></i>
-                    <span>GitHub Profile</span>
-                </a>
+        <section id="projects" class="projects">
+            <div class="container">
+                <h2>Featured Projects</h2>
+                <div class="projects-grid">
+                    <div class="project-card">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce solution built with React and Node.js, featuring user authentication, payment processing, and admin dashboard.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Weather App</h3>
+                        <p>A responsive weather application that provides real-time weather data and forecasts using external APIs and modern JavaScript.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                    <div class="project-card">
+                        <h3>Task Management Tool</h3>
+                        <p>A collaborative task management application with real-time updates, user roles, and project tracking capabilities.</p>
+                        <div class="project-links">
+                            <a href="#" class="project-link">
+                                <i class="fab fa-github"></i>
+                                Code
+                            </a>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-external-link-alt"></i>
+                                Live Demo
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
 
-        <!-- Footer -->
-        <footer class="footer">
-            <p>&copy; 2024 Xinyuan. Built with <i class="fas fa-heart"></i> and code.</p>
-        </footer>
-    </div>
+        <section id="contact" class="contact">
+            <div class="container">
+                <h2>Let's Connect</h2>
+                <div class="contact-links">
+                    <a href="mailto:xinyuan@example.com" class="contact-link">
+                        <i class="fas fa-envelope"></i>
+                        Email
+                    </a>
+                    <a href="https://linkedin.com/in/xinyuan" class="contact-link">
+                        <i class="fab fa-linkedin"></i>
+                        LinkedIn
+                    </a>
+                    <a href="https://github.com/xinyuan" class="contact-link">
+                        <i class="fab fa-github"></i>
+                        GitHub
+                    </a>
+                    <a href="https://twitter.com/xinyuan" class="contact-link">
+                        <i class="fab fa-twitter"></i>
+                        Twitter
+                    </a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Xinyuan. All rights reserved.</p>
+        </div>
+    </footer>
 
     <script src="script.js"></script>
 </body>
