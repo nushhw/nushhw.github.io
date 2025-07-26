@@ -2,157 +2,158 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Name - Developer Portfolio</title>
+    <title>Xinyuan - Developer Portfolio</title>
     <link href="style.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="nav-container">
-                <h1 class="logo">Your Name</h1>
-                <ul class="nav-menu">
-                    <li><a href="#about" class="nav-link">About</a></li>
-                    <li><a href="#projects" class="nav-link">Projects</a></li>
-                    <li><a href="#skills" class="nav-link">Skills</a></li>
-                    <li><a href="#contact" class="nav-link">Contact</a></li>
-                </ul>
+    <div class="container">
+        <!-- Header Section -->
+        <header class="hero">
+            <div class="profile-image">
+                <i class="fas fa-user-circle"></i>
             </div>
-        </nav>
-    </header>
-
-    <section id="hero">
-        <div class="hero-content">
-            <h2>Hello, I'm <span class="highlight">Your Name</span></h2>
-            <p class="hero-description">Full-Stack Developer & Problem Solver</p>
-            <p>I create innovative solutions using modern technologies</p>
-            <a href="#projects" class="cta-button">View My Work</a>
-        </div>
-    </section>
-
-    <section id="about">
-        <div class="container">
-            <h2>About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>I'm a passionate developer with experience in building web applications and solving complex problems. I love learning new technologies and creating projects that make a difference.</p>
-                    <p>When I'm not coding, you can find me exploring new frameworks, contributing to open source projects, or sharing knowledge with the developer community.</p>
-                </div>
+            <h1 class="name">Xinyuan</h1>
+            <p class="title">Full-Stack Developer</p>
+            <p class="subtitle">Passionate about creating innovative solutions through code</p>
+            <div class="social-links">
+                <a href="#" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
             </div>
-        </div>
-    </section>
+        </header>
 
-    <section id="skills">
-        <div class="container">
-            <h2>Programming Languages & Technologies</h2>
+        <!-- About Section -->
+        <section class="about">
+            <h2><i class="fas fa-user"></i> About Me</h2>
+            <p>Hello! I'm Xinyuan, a passionate developer who loves turning ideas into reality through code. I enjoy working on both frontend and backend technologies, always eager to learn new frameworks and solve challenging problems.</p>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="skills">
+            <h2><i class="fas fa-code"></i> Programming Languages & Technologies</h2>
             <div class="skills-grid">
                 <div class="skill-item">
-                    <h3>JavaScript</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="90%"></div>
-                    </div>
+                    <i class="fab fa-js-square"></i>
+                    <span>JavaScript</span>
                 </div>
                 <div class="skill-item">
-                    <h3>Python</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%"></div>
-                    </div>
+                    <i class="fab fa-python"></i>
+                    <span>Python</span>
                 </div>
                 <div class="skill-item">
-                    <h3>React</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="80%"></div>
-                    </div>
+                    <i class="fab fa-react"></i>
+                    <span>React</span>
                 </div>
                 <div class="skill-item">
-                    <h3>Node.js</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="75%"></div>
-                    </div>
+                    <i class="fab fa-node-js"></i>
+                    <span>Node.js</span>
                 </div>
                 <div class="skill-item">
-                    <h3>HTML/CSS</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="95%"></div>
-                    </div>
+                    <i class="fab fa-html5"></i>
+                    <span>HTML5</span>
                 </div>
                 <div class="skill-item">
-                    <h3>Git</h3>
-                    <div class="skill-bar">
-                        <div class="skill-progress" data-width="85%"></div>
-                    </div>
+                    <i class="fab fa-css3-alt"></i>
+                    <span>CSS3</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fas fa-database"></i>
+                    <span>SQL</span>
+                </div>
+                <div class="skill-item">
+                    <i class="fab fa-git-alt"></i>
+                    <span>Git</span>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="projects">
-        <div class="container">
-            <h2>My Projects</h2>
+        <!-- Projects Section -->
+        <section class="projects">
+            <h2><i class="fas fa-project-diagram"></i> Featured Projects</h2>
             <div class="projects-grid">
                 <div class="project-card">
+                    <div class="project-icon">
+                        <i class="fas fa-shopping-cart"></i>
+                    </div>
                     <h3>E-Commerce Platform</h3>
-                    <p>A full-stack e-commerce solution built with React, Node.js, and MongoDB. Features include user authentication, payment processing, and admin dashboard.</p>
+                    <p>A full-stack e-commerce solution built with React and Node.js, featuring user authentication, payment processing, and inventory management.</p>
                     <div class="project-tech">
                         <span class="tech-tag">React</span>
                         <span class="tech-tag">Node.js</span>
                         <span class="tech-tag">MongoDB</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <h3>Task Management App</h3>
-                    <p>A productivity app that helps teams manage projects and tasks efficiently. Built with Python Flask backend and vanilla JavaScript frontend.</p>
+                    <div class="project-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Data Visualization Dashboard</h3>
+                    <p>Interactive dashboard for data analysis using Python and D3.js, helping businesses make data-driven decisions with real-time insights.</p>
                     <div class="project-tech">
                         <span class="tech-tag">Python</span>
+                        <span class="tech-tag">D3.js</span>
                         <span class="tech-tag">Flask</span>
-                        <span class="tech-tag">JavaScript</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
-                
+
                 <div class="project-card">
-                    <h3>Weather Dashboard</h3>
-                    <p>A responsive weather application that provides real-time weather data and forecasts. Uses external APIs and features interactive charts.</p>
+                    <div class="project-icon">
+                        <i class="fas fa-mobile-alt"></i>
+                    </div>
+                    <h3>Task Management App</h3>
+                    <p>A responsive web application for project management with drag-and-drop functionality, team collaboration features, and progress tracking.</p>
                     <div class="project-tech">
-                        <span class="tech-tag">JavaScript</span>
-                        <span class="tech-tag">Chart.js</span>
-                        <span class="tech-tag">API Integration</span>
+                        <span class="tech-tag">Vue.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">PostgreSQL</span>
                     </div>
                     <div class="project-links">
-                        <a href="#" class="project-link">Live Demo</a>
-                        <a href="#" class="project-link">GitHub</a>
+                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="#" class="project-link"><i class="fas fa-external-link-alt"></i> Demo</a>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section id="contact">
-        <div class="container">
-            <h2>Get In Touch</h2>
-            <p>I'm always interested in new opportunities and collaborations.</p>
-            <div class="contact-links">
-                <a href="mailto:your.email@example.com" class="contact-link">Email</a>
-                <a href="https://github.com/yourusername" class="contact-link">GitHub</a>
-                <a href="https://linkedin.com/in/yourprofile" class="contact-link">LinkedIn</a>
+        <!-- Contact Section -->
+        <section class="contact">
+            <h2><i class="fas fa-envelope"></i> Get In Touch</h2>
+            <p>I'm always interested in new opportunities and collaborations. Feel free to reach out!</p>
+            <div class="contact-info">
+                <a href="mailto:xinyuan@example.com" class="contact-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>xinyuan@example.com</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <i class="fab fa-linkedin"></i>
+                    <span>LinkedIn Profile</span>
+                </a>
+                <a href="#" class="contact-item">
+                    <i class="fab fa-github"></i>
+                    <span>GitHub Profile</span>
+                </a>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer>
-        <div class="container">
-            <p>&copy; 2024 Your Name. All rights reserved.</p>
-        </div>
-    </footer>
+        <!-- Footer -->
+        <footer class="footer">
+            <p>&copy; 2024 Xinyuan. Built with <i class="fas fa-heart"></i> and code.</p>
+        </footer>
+    </div>
 
     <script src="script.js"></script>
 </body>
